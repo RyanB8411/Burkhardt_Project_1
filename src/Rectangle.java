@@ -8,7 +8,7 @@ import java.awt.Point;
 
 // Class that defines a hollow rectangle object
 
-class Rectangle extends HollowPolygon {
+class Rectangle extends SolidPolygon {
 
     // Constructor that initializes the vertices of the rectangle
 

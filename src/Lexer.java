@@ -14,8 +14,15 @@ import java.io.StreamTokenizer;
 class Lexer {
 
     private StreamTokenizer tokenizer;
-    private String punctuation = ",;.()";
-    private Token[] punctuationTokens = {Token.COMMA, Token.SEMICOLON, Token.PERIOD, Token.LEFT_PAREN, Token.RIGHT_PAREN };
+
+
+    
+    //Added the quotation mark with the escape character to include quotation marks
+    private String punctuation = ",;.()\"";
+
+
+
+    private Token[] punctuationTokens = {Token.COMMA, Token.SEMICOLON, Token.PERIOD, Token.LEFT_PAREN, Token.RIGHT_PAREN, Token.QUOTATION };
 
     // Constructor that creates a lexical analyzer object given the source file
 

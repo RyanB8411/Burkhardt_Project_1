@@ -5,7 +5,6 @@
 
 import java.awt.Color;
 import java.awt.Point;
-import java.awt.Rectangle;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,6 +47,7 @@ class Parser {
 
     private void parseImages(Scene scene, Token imageToken) throws LexicalError, SyntaxError, IOException {
         int height, width, offset, radius;
+        String string ="";
         verifyNextToken(Token.COLOR);
         int[] colors = getNumberList(3);
         Color color = new Color(colors[0], colors[1], colors[2]);
@@ -72,7 +72,25 @@ class Parser {
             width = lexer.getNumber();
             Rectangle rectangle = new Rectangle(color, point, height, width);
             scene.addImage(rectangle);
-        } else {
+
+
+
+
+
+
+        } else if (imageToken == Token.TEXT) {
+            verifyNextToken(Token.QUOTATION);
+            string = lexer.getLexeme();
+            Text text = new Text(color, point, string);
+            scene.addImage(text);
+        }
+        
+        
+        
+        
+        
+        
+        else {
              throw new SyntaxError(lexer.getLineNo(), "Unexpected image name " + imageToken);
         }
         verifyNextToken(Token.SEMICOLON);
