@@ -56,15 +56,27 @@ class Parser {
         Point point = new Point(location[0], location[1]);
 
 
-        if (imageToken == Token.RIGHT_TRIANGLE) {
+
+        //Since Triangles noth used the same variables I decided to use the built in method and add
+        // the Isosceles Triangle method into it.
+
+        if (imageToken == Token.RIGHT_TRIANGLE || imageToken == Token.ISOSCELES_TRIANGLE) {
             verifyNextToken(Token.HEIGHT);
             verifyNextToken(Token.NUMBER);
             height = lexer.getNumber();
             verifyNextToken(Token.WIDTH);
             verifyNextToken(Token.NUMBER);
             width = lexer.getNumber();
-            RightTriangle triangle = new RightTriangle(color, point, height, width);
-            scene.addImage(triangle);
+            if(imageToken == Token.RIGHT_TRIANGLE){
+                RightTriangle triangle = new RightTriangle(color, point, height, width);
+                scene.addImage(triangle);
+            }
+            else if (imageToken == Token.ISOSCELES_TRIANGLE){
+                IsoscelesTriangle triangle = new IsoscelesTriangle(color, point, height, width);
+                scene.addImage(triangle);
+            }
+            
+            
         } else if (imageToken == Token.RECTANGLE) {
             verifyNextToken(Token.HEIGHT);
             verifyNextToken(Token.NUMBER);
@@ -79,7 +91,7 @@ class Parser {
 
 
 
-
+        //Used your built in getLexMe to create the string and add the image. Also added QUOTATION and TEXT to the Tokens field to call
         } else if (imageToken == Token.TEXT) {
             verifyNextToken(Token.QUOTATION);
             string = lexer.getLexeme();
@@ -88,10 +100,12 @@ class Parser {
         }
 
 
+        //Created the Parallelogram class by copying the others above and making a second point by calling right parenthesis in the get number list
+        //Used a second location to store the second point and named it after examples just added 2.
         else if (imageToken == Token.PARALLELOGRAM) {
-            verifyNextToken(Token.AT);
-            int[] parallelogramLocation = getNumberList(4);
-            Point point2 = new Point(parallelogramLocation[2], parallelogramLocation[3]);
+            verifyCurrentToken(Token.RIGHT_PAREN);
+            int[] location2 = getNumberList(2);
+            Point point2 = new Point(location2[0], location2[1]);
             verifyNextToken(Token.OFFSET);
             verifyNextToken(Token.NUMBER);
             offset = lexer.getNumber();
