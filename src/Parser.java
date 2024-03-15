@@ -54,6 +54,8 @@ class Parser {
         verifyNextToken(Token.AT);
         int[] location = getNumberList(2);
         Point point = new Point(location[0], location[1]);
+
+
         if (imageToken == Token.RIGHT_TRIANGLE) {
             verifyNextToken(Token.HEIGHT);
             verifyNextToken(Token.NUMBER);
@@ -83,6 +85,18 @@ class Parser {
             string = lexer.getLexeme();
             Text text = new Text(color, point, string);
             scene.addImage(text);
+        }
+
+
+        else if (imageToken == Token.PARALLELOGRAM) {
+            verifyNextToken(Token.AT);
+            int[] parallelogramLocation = getNumberList(4);
+            Point point2 = new Point(parallelogramLocation[2], parallelogramLocation[3]);
+            verifyNextToken(Token.OFFSET);
+            verifyNextToken(Token.NUMBER);
+            offset = lexer.getNumber();
+            Parallelogram parallelogram = new Parallelogram(color, point, point2, offset);
+            scene.addImage(parallelogram);
         }
         
         
