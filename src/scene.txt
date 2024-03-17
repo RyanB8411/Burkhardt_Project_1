@@ -4,5 +4,4 @@ Scene Polygons (500, 500)
   Text Color(0, 0, 0) at (400, 200) "Hello World";
   Parallelogram Color (0, 0, 255) at (340, 50) (440, 120) Offset 30;
   IsoscelesTriangle Color (255, 0, 0) at (120, 120) Height 100 Width 200;
-
 End.
