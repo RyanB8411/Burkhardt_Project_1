@@ -46,7 +46,7 @@ class Parser {
     // rectangle -> RECTANGLE_ COLOR number_list AT number_list HEIGHT NUMBER WIDTH NUMBER ';'
 
     private void parseImages(Scene scene, Token imageToken) throws LexicalError, SyntaxError, IOException {
-        int height, width, offset, radius;
+        int height, width, offset, radius, numSides;
         String string ="";
         verifyNextToken(Token.COLOR);
         int[] colors = getNumberList(3);
@@ -103,7 +103,6 @@ class Parser {
         //Created the Parallelogram class by copying the others above and making a second point by calling right parenthesis in the get number list
         //Used a second location to store the second point and named it after examples just added 2.
         else if (imageToken == Token.PARALLELOGRAM) {
-            verifyCurrentToken(Token.RIGHT_PAREN);
             int[] location2 = getNumberList(2);
             Point point2 = new Point(location2[0], location2[1]);
             verifyNextToken(Token.OFFSET);
@@ -113,7 +112,18 @@ class Parser {
             scene.addImage(parallelogram);
         }
         
-        
+        //Created the Parallelogram class by copying the others above and making a second point by calling right parenthesis in the get number list
+        //Used a second location to store the second point and named it after examples just added 2.
+        else if (imageToken == Token.REGULAR_POLYGON) {
+            verifyNextToken(Token.SIDES);
+            verifyNextToken(Token.NUMBER);
+            numSides = lexer.getNumber();
+            verifyNextToken(Token.RADIUS);
+            verifyNextToken(Token.NUMBER);
+            radius = lexer.getNumber();
+            RegularPolygon regPolygon = new RegularPolygon(color, numSides, point, radius);
+            scene.addImage(regPolygon);
+        }
         
         
         

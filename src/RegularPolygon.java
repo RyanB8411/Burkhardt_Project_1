@@ -13,12 +13,12 @@ class RegularPolygon extends SolidPolygon {
     // Constructor that initializes the vertices of the rectangle
 
     public RegularPolygon(Color color, int numSides, Point centerPoint, int radius) {
-        super(color, 4);
+        super(color, numSides);
         int[] x_points = new int[numSides];
         int[] y_points = new int[numSides];
         for (int i=0; i<numSides; ++i) {
-            double temp_x = (centerPoint.x + radius) * Math.cos(2*Math.PI*i/numSides);
-            double temp_y = (centerPoint.x + radius) * Math.sin(2*Math.PI*i/numSides);
+            double temp_x = centerPoint.x + radius * Math.cos(2*Math.PI*i/numSides);
+            double temp_y = centerPoint.y + radius * Math.sin(2*Math.PI*i/numSides);
             x_points[i] = (int)temp_x;
             y_points[i] = (int)temp_y;
         }
