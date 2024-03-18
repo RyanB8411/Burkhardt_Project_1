@@ -1,7 +1,13 @@
-// CMSC 330 Advanced Programming Languages
-// Project 1 Skeleton
-// UMGC CITE
-// August 2021
+/**
+ * UMGC CMSC 330
+ * Project 1
+ * For this class I added an escape character to include quotation marks
+ * Also, I added the Token.Quotation to build my string quotation mark
+ * and the parser to pick it up.
+ * @author Ryan Burkhardt
+ * Date: 17Mar2024
+ * Java 21
+*/
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,6 +30,9 @@ class Lexer {
     //Added Token Quotation to the Token list
     private Token[] punctuationTokens = {Token.COMMA, Token.SEMICOLON, Token.PERIOD, Token.LEFT_PAREN, Token.RIGHT_PAREN, Token.QUOTATION };
 
+
+
+    
     // Constructor that creates a lexical analyzer object given the source file
 
     public Lexer(File file) throws FileNotFoundException {
