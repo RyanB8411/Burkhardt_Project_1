@@ -13,7 +13,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 
-// Class that defines a hollow rectangle object
+// Class that defines 
 
 public class Text extends Image {
 
@@ -34,5 +34,4 @@ public class Text extends Image {
         colorDrawing(graphics);//Sets Color of the graphic or string
         graphics.drawString(string, point.x, point.y);//uses the drawString method to display on the GUI
     }
-    
 }

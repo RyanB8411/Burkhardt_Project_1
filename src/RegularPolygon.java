@@ -3,7 +3,7 @@
  * Project 1
  * Class that extends solid polygon that will call Super color and sets the verteices by how many sides
  * are inputted from the .txt file. This class creates a polygon based off a radius, number of sides, the
- * center point and a color. This class is however different where vertices can change and the set of x 
+ * center point and a color. This class is however different where vertices can change and the set of x
  * and y coordinates run through a for loop and run through the same calculation incrementing the angle
  * put into cos for x values and sin for y values.
  * @author Ryan Burkhardt
