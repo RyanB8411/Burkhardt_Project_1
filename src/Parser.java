@@ -7,14 +7,14 @@ import java.awt.Color;
 import java.awt.Point;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-import javax.swing.JFrame;
+// import javax.swing.JFrame;
 
 // This class provides the skeleton parser for project 1
 
 class Parser {
-    private JFrame window;
+    // private JFrame window;
     private Token token;
     private Lexer lexer;
 
@@ -161,21 +161,21 @@ class Parser {
 
     // Returns a list of numbers
 
-    private int[] getNumberList() throws LexicalError, SyntaxError, IOException {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        verifyNextToken(Token.LEFT_PAREN);
-        do {
-            verifyNextToken(Token.NUMBER);
-            list.add((int) lexer.getNumber());
-            token = lexer.getNextToken();
-        }
-        while (token == Token.COMMA);
-        verifyCurrentToken(Token.RIGHT_PAREN);
-        int[] values = new int[list.size()];
-        for (int i = 0; i < values.length; i++)
-            values[i] = list.get(i);
-        return values;
-    }
+    // private int[] getNumberList() throws LexicalError, SyntaxError, IOException {
+    //     ArrayList<Integer> list = new ArrayList<Integer>();
+    //     verifyNextToken(Token.LEFT_PAREN);
+    //     do {
+    //         verifyNextToken(Token.NUMBER);
+    //         list.add((int) lexer.getNumber());
+    //         token = lexer.getNextToken();
+    //     }
+    //     while (token == Token.COMMA);
+    //     verifyCurrentToken(Token.RIGHT_PAREN);
+    //     int[] values = new int[list.size()];
+    //     for (int i = 0; i < values.length; i++)
+    //         values[i] = list.get(i);
+    //     return values;
+    // }
 
     // Verifies that the next token is the expected token
 

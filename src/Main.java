@@ -42,5 +42,6 @@ class Main {
         } catch (IOException error) {
             System.out.println("IO Error");
         }
+        stdin.close();
     }
 }
