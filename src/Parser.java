@@ -93,10 +93,10 @@ class Parser {
 
         //Used your built in getLexMe to create the string and add the image. Also added QUOTATION and TEXT to the Tokens field to call
         } else if (imageToken == Token.TEXT) {
-            verifyNextToken(Token.QUOTATION);
-            string = lexer.getLexeme();
-            Text text = new Text(color, point, string);
-            scene.addImage(text);
+            verifyNextToken(Token.QUOTATION);//Reads in the text after key Quotation
+            string = lexer.getLexeme();//Uses lexer message to extract message from text in between to quotation marks
+            Text text = new Text(color, point, string);//Constructs text object
+            scene.addImage(text);//Displays Text to GUI
         }
 
 

@@ -1,13 +1,13 @@
-// The Text class must contain a constructor that is supplied the color that defines the text color, a
-// point that specifies the text location and a string containing the text to be displayed. It must also
-// contain a draw function because it is extends the abstract class Image. The draw function must
-// draw the text using the method drawString in Graphics class.
-
-//Ryan Burkhardt
-// CMSC 330 Advanced Programming Languages
-// Project 1 Draw Text
-// Professor: Dr. Elizes
-// March 2024
+/**
+ * UMGC CMSC 330
+ * Project 1
+ * Class that extends image and Constructs a text object with the super
+ * Color Point and a string. After this is made using a method similar to the class
+ * uses the override to draw the graphic onto the GUI as per reuirements.
+ * @author Ryan Burkhardt
+ * Date: 17Mar2024
+ * Java 21
+*/
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -17,21 +17,22 @@ import java.awt.Point;
 
 public class Text extends Image {
 
+    //Stating our private variables that will be used in constructor
     private String string;
     private Point point;
 
-    // Constructor that initializes the vertices of the rectangle
+    // Constructor that initializes the Text Object
 
     Text(Color color, Point point, String string) {
-        super(color);
-        this.point = point;
-        this.string = string;
+        super(color);//Calls super color to set color
+        this.point = point;//Sets the Point Coordinates
+        this.string = string;//sets the String
     }
 
-    @Override
+    @Override//Overrides the draw method in Image
     void draw(Graphics graphics) {
-        colorDrawing(graphics);
-        graphics.drawString(string, point.x, point.y);
+        colorDrawing(graphics);//Sets Color of the graphic or string
+        graphics.drawString(string, point.x, point.y);//uses the drawString method to display on the GUI
     }
     
 }

@@ -21,7 +21,7 @@ class Lexer {
     private String punctuation = ",;.()\"";
 
 
-
+    //Added Token Quotation to the Token list
     private Token[] punctuationTokens = {Token.COMMA, Token.SEMICOLON, Token.PERIOD, Token.LEFT_PAREN, Token.RIGHT_PAREN, Token.QUOTATION };
 
     // Constructor that creates a lexical analyzer object given the source file
