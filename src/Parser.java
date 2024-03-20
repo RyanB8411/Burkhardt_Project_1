@@ -50,6 +50,12 @@ class Parser {
         String string ="";
         verifyNextToken(Token.COLOR);
         int[] colors = getNumberList(3);
+        //After getting an error 
+        for (int i=0; i < colors.length; i++){
+            if (colors[i] < 0 || colors[i] > 255) {
+                throw new SyntaxError(lexer.getLineNo(), "Color component value must be between 0 and 255");
+            }
+        }
         Color color = new Color(colors[0], colors[1], colors[2]);
         verifyNextToken(Token.AT);
         int[] location = getNumberList(2);

@@ -1,0 +1,4 @@
+Scene Polygons (500, 500)
+  Parallelogram Color (0, 125, 252) at (35, 5) (75, 25) Offset 30;
+  Parallelogram Color (255, 0, 0) at (100, 100) (400, 400) Offset 95;
+End.
