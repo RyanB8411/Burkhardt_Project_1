@@ -1,7 +1,7 @@
 Scene Polygons (500, 500)
   RightTriangle Color (241, 148, 138) at (50, 30) Height 100 Width 300;
   Rectangle Color (207, 255, 4) at (100, 100) Height 200 Width 100;
-  Text Color(256, 6, 130) at (400, 200) "Hello World";
+  Text Color(255, 6, 130) at (400, 200) "Hello World";
   Parallelogram Color (0, 125, 252) at (340, 50) (440, 120) Offset 30;
   IsoscelesTriangle Color (134, 14, 255) at (120, 120) Height 100 Width 200;
   RegularPolygon Color(252, 126, 0) at (300, 300) Sides 6 Radius 80;
