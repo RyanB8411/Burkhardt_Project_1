@@ -1,5 +1,0 @@
-Scene Polygons (500, 500)
-  Text Color(255, 0, 0) at (25, 25) "Ryan Burkhardt Project 1";
-  IsoscelesTriangle Color (0, 255, 0) at (60, 26) Height 100 Width 98;
-  IsoscelesTriangle Color (0, 0, 255) at (250, 250) Height 200 Width 400;
-End.

@@ -1,0 +1,6 @@
+Scene Polygons (500, 500)
+  IsoscelesTriangle Color (0, 255, 0) at (60, 26) Height 100 Width 98;
+  IsoscelesTriangle Color (0, 0, 255) at (250, 100) Height 200 Width 400;
+  IsoscelesTriangle Color (255, 255, 0) at (100, 320) Height 100 Width 20;
+  IsoscelesTriangle Color (255, 0, 255) at (250, 400) Height 60 Width 45;
+End.

@@ -1,0 +1,7 @@
+Scene Polygons (500, 500)
+  Text Color(255, 0, 0) at (25, 25) "Ryan Burkhardt Project 1";
+  Text Color(255, 255, 0) at (100, 100) "Text Test Line 2";
+  Text Color(0, 255, 0) at (200, 315) "Testing the Text";
+  Text Color(0, 255, 255) at (300, 200) "What color will this be?";
+  Text Color(255, 0, 255) at (150, 250) "Test Test Test";
+End.
