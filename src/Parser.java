@@ -1,7 +1,13 @@
-// CMSC 330 Advanced Programming Languages
-// Project 1 Skeleton
-// UMGC CITE
-// August 2021
+/**
+ * UMGC CMSC 330
+ * Project 1
+ * This class extends SolidPolygon uses the same methods from the rectangle class but
+ * adds a point and an offset to the constructor instead of the height and width.
+ * I chose to use the offset to shift the top to the right and left for the bottom points.
+ * @author Ryan Burkhardt
+ * Date: 17Mar2024
+ * Java 21
+*/
 
 import java.awt.Color;
 import java.awt.Point;
