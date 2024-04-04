@@ -1,0 +1,3 @@
+Scene Polygons (500, 500)
+  IsoscelesTriangle Color (null, null, null) at (60, 26) Height 100 Width 98;
+End.
